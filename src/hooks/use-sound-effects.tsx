@@ -37,11 +37,12 @@ export function useSoundEffects(options: UseSoundEffectsOptions = {}) {
     });
 
     return () => {
-      audioCache.current.forEach((audio) => {
+      const cache = audioCache.current;
+      cache.forEach((audio) => {
         audio.pause();
         audio.src = "";
       });
-      audioCache.current.clear();
+      cache.clear();
     };
   }, [volume]);
 

@@ -68,7 +68,7 @@ export const ModalBody = ({
   children: ReactNode;
   className?: string;
 }) => {
-  const { open } = useModal();
+  const { open, setOpen } = useModal();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -76,7 +76,7 @@ export const ModalBody = ({
         if (e.key === "Escape") setOpen(false);
       });
     }
-  }, []);
+  }, [setOpen]);
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
