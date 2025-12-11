@@ -27,7 +27,7 @@
 
 #### GitHub Username
 - [ ] Open `src/components/visualizations/github-activity.tsx`
-- [ ] Line 7: Change `username = "Abhiz2411"` to your GitHub username
+- [ ] Line 7: Change `username = "Yash11778"` to your GitHub username
 - [ ] Save and check visualization loads correctly
 
 #### Tech Stack Skills

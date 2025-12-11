@@ -182,4 +182,4 @@ This project follows [Semantic Versioning](https://semver.org/):
 ---
 
 **Maintained by:** Yash Dharme  
-**Repository:** https://github.com/Abhiz2411/3D-interactive-portfolio
+**Repository:** https://github.com/Yash11778/Yash-Portfolio
