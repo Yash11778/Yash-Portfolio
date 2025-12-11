@@ -11,7 +11,6 @@ const SkillsSectionModern = lazy(() => import("@/components/sections/skills-mode
 const ProjectsSectionModern = lazy(() => import("@/components/sections/projects-modern"));
 const ContactSectionModern = lazy(() => import("@/components/sections/contact-modern"));
 const GitHubActivity = lazy(() => import("@/components/visualizations/github-activity").then(mod => ({ default: mod.GitHubActivity })));
-const TechStackRadar = lazy(() => import("@/components/visualizations/tech-stack-radar").then(mod => ({ default: mod.TechStackRadar })));
 const ScrollReveal = lazy(() => import("@/components/scroll-effects/parallax").then(mod => ({ default: mod.ScrollReveal })));
 
 // Loading component
@@ -41,11 +40,8 @@ function MainPage() {
           
           <Suspense fallback={<SectionLoader />}>
             <section className="relative w-full py-20 px-4 bg-white dark:bg-black">
-              <div className="container mx-auto max-w-6xl space-y-12">
+              <div className="container mx-auto max-w-6xl">
                 <ScrollReveal direction="up">
-                  <TechStackRadar />
-                </ScrollReveal>
-                <ScrollReveal direction="up" delay={0.2}>
                   <GitHubActivity />
                 </ScrollReveal>
               </div>
