@@ -6,8 +6,6 @@ Welcome to the repository for my personal portfolio website! 🎉 This project i
 
 ### Live preview: https://www.yashdharme.com/
 
-This project is **inspired** by the amazing work of [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio). His innovative approach to web design and attention to detail has been a huge influence. Thank you, Naresh! 🙏
-
 ## 🔥 Features
 
 Here are the key highlights of my portfolio:
@@ -92,10 +90,6 @@ This project is deployed using **Vercel** for its blazing-fast performance and e
 5. Save the changes and redeploy your application
 
 Note: Make sure to keep your API key secret and never commit it to your repository.
-
-## 💖 Acknowledgments
-
-A huge shoutout to [Naresh Khatri](https://github.com/Naresh-Khatri/Portfolio) for the inspiration and ideas that sparked this journey! 💡 If you're interested in creative web design, definitely check out his work.
 
 ## 📬 Contact
 

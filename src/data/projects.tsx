@@ -846,7 +846,6 @@ const projects: Project[] = [
       "/assets/projects-screenshots/AI Fintech/1.png",
       "/assets/projects-screenshots/AI Fintech/2.png",
       "/assets/projects-screenshots/AI Fintech/3.png",
-      "/assets/projects-screenshots/AI Fintech/4.png",
       "/assets/projects-screenshots/AI Fintech/5.png",
     ],
     skills: {

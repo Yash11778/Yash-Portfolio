@@ -36,7 +36,6 @@ const PROJECTS = [
       "/assets/projects-screenshots/AI Fintech/1.png",
       "/assets/projects-screenshots/AI Fintech/2.png",
       "/assets/projects-screenshots/AI Fintech/3.png",
-      "/assets/projects-screenshots/AI Fintech/4.png",
       "/assets/projects-screenshots/AI Fintech/5.png"
     ],
   },
@@ -48,10 +47,7 @@ const PROJECTS = [
     link: "https://github.com/Yash11778/3D-interactive-portfolio",
     liveUrl: "https://www.yashdharme.com/",
     images: [
-      "/assets/projects-screenshots/myportfolio/landing.png",
-      "/assets/projects-screenshots/myportfolio/navbar.png",
-      "/assets/projects-screenshots/myportfolio/projects.png",
-      "/assets/projects-screenshots/myportfolio/project.png",
+      "/assets/projects-screenshots/myportfolio/landing.png"
     ],
   },
   {
