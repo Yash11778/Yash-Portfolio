@@ -57,11 +57,39 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Neobrutalism colors
+        neo: {
+          yellow: "#FFED4E",
+          blue: "#3B82F6",
+          pink: "#EC4899",
+          green: "#10B981",
+          purple: "#9333EA",
+          orange: "#F97316",
+          black: "#000000",
+          white: "#FFFFFF",
+        },
+        // Glassmorphism colors
+        glass: {
+          light: "rgba(255, 255, 255, 0.1)",
+          medium: "rgba(255, 255, 255, 0.15)",
+          strong: "rgba(255, 255, 255, 0.25)",
+          border: "rgba(255, 255, 255, 0.2)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        '3xl': '1.5rem',
+        '4xl': '2rem',
+      },
+      boxShadow: {
+        'neo': '8px 8px 0px 0px rgba(0,0,0,1)',
+        'neo-sm': '4px 4px 0px 0px rgba(0,0,0,1)',
+        'neo-lg': '12px 12px 0px 0px rgba(0,0,0,1)',
+        'neo-white': '8px 8px 0px 0px rgba(255,255,255,1)',
+        'neo-white-sm': '4px 4px 0px 0px rgba(255,255,255,1)',
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
       },
       keyframes: {
         "accordion-down": {

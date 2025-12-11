@@ -3,11 +3,17 @@ import { useDevToolsOpen } from "@/hooks/use-devtools-open";
 import React, { useEffect, useState } from "react";
 import NyanCat from "./nyan-cat";
 import { AnimatePresence } from "framer-motion";
+import { useAchievements } from "@/components/achievements/achievement-system";
 
 const EasterEggs = () => {
   const { isDevToolsOpen } = useDevToolsOpen();
+  const { unlock } = useAchievements();
+  
   useEffect(() => {
     if (!isDevToolsOpen) return;
+    
+    // Unlock curious achievement
+    unlock("curious");
     // console.log(
     //   "%cWhoa, look at you! 🕵️‍♂️\n\n" +
     //     "Peeking under the hood, eh? Just be careful, " +

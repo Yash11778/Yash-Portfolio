@@ -13,6 +13,7 @@ import { BlurIn, BoxReveal } from "../reveal-animations";
 import ScrollDownIcon from "../scroll-down-icon";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { config } from "@/data/config";
+import TypingAnimation from "../typing-animation";
 
 const HeroSection = () => {
   const { isLoading } = usePreloader();
@@ -70,20 +71,27 @@ const HeroSection = () => {
                 </BlurIn>
                 {/* <div className="md:block hidden bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 w-screen h-px animate-fade-right animate-glow" /> */}
                 <BlurIn delay={1.2}>
-                  <p
+                  <div
                     className={cn(
                       "md:self-start md:mt-4 font-thin text-md text-slate-500 dark:text-zinc-400 ml-3",
-                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                      "cursor-default font-display sm:text-xl md:text-xl bg-clip-text "
                     )}
                   >
-                    AI Enthusiast
-                  </p>
+                    <TypingAnimation 
+                      texts={[
+                        "AI Enthusiast",
+                        "Full Stack Developer", 
+                        "DevOps Engineer",
+                        "Problem Solver"
+                      ]}
+                    />
+                  </div>
                 </BlurIn>
               </div>
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link
                   href={
-                    "https://drive.google.com/file/d/1vjtWfqYGMIMK_rlBnmDEpKco9MiEaQss/view"
+                    "https://drive.google.com/file/d/1JLKfwclFPewy0uiTiAg6yDajIWwg9FF9/view?usp=sharing"
                   }
                   target="_blank"
                   className="flex-1"

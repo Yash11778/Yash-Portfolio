@@ -292,6 +292,42 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <SiArduino/>,
   },
+  streamlit: {
+    title: "Streamlit",
+    bg: "black",
+    fg: "white",
+    icon: <SiPython/>,
+  },
+  pandas: {
+    title: "Pandas",
+    bg: "black",
+    fg: "white",
+    icon: <SiPython/>,
+  },
+  beautifulsoup: {
+    title: "BeautifulSoup",
+    bg: "black",
+    fg: "white",
+    icon: <SiPython/>,
+  },
+  solidity: {
+    title: "Solidity",
+    bg: "black",
+    fg: "white",
+    icon: <SiPython/>,
+  },
+  hardhat: {
+    title: "Hardhat",
+    bg: "black",
+    fg: "white",
+    icon: <SiPython/>,
+  },
+  ethers: {
+    title: "Ethers.js",
+    bg: "black",
+    fg: "white",
+    icon: <SiJavascript/>,
+  },
 };
 export type Project = {
   id: string;
@@ -769,129 +805,123 @@ const projects: Project[] = [
   // },
 
   // +
-  { // 01. AI Docker file optimizer project
-    id: "aidockerfileoptimizer",
-    category: "AI and DevOps",
-    title: "AI Dockerfile Optimizer",
-    src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
+  { // 01. Hackronyx Website project
+    id: "hackronyx",
+    category: "Web Development",
+    title: "Hackronyx Website",
+    src: "/assets/projects-screenshots/HacKronyX/2.png",
     screenshots: ["1.png", "2.png", "3.png"],
-    live: "https://ai-docker-file-optimizer.netlify.app/",
-    github:"https://github.com/Abhiz2411/AI-Docker-file-optimizer",
+    live: "https://vercel.com/yash-dharmes-projects-b0a8a3a0/hackronyx",
+    github:"https://github.com/Yash11778/hackronyx",
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.openai,PROJECT_SKILLS.netlify],
+      backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller, more efficient images. 
-            Simply paste your Dockerfile, and the app analyzes it for best practices and size 
-            optimization tips. It then provides a refactored, optimized version of the Dockerfile. 
-            Deployed on Vercel, it ensures fast and easy access to Dockerfile optimization.
+            Hackronyx is a modern web application built with cutting-edge technologies. 
+            This project showcases responsive design, interactive features, and seamless 
+            user experience. Deployed on Vercel for optimal performance and reliability.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
             images={[
-              `${BASE_PATH}/aidockerfileoptimizer/1.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/2.png`,
-              `${BASE_PATH}/aidockerfileoptimizer/3.png`,
+              `${BASE_PATH}/HacKronyX/1.png`,
+              `${BASE_PATH}/HacKronyX/2.png`,
+              `${BASE_PATH}/HacKronyX/3.png`,
             ]}
           />
         </div>
       );
     },
   },
-  { // 02. FinanceMe project
-    id: "financeme",
-    category: "DevOps in Banking and Finance",
-    title: "FinanceMe: Complete DevOps Capstone Project",
-    src: "/assets/projects-screenshots/financeme/1.png",
-    screenshots: ["/assets/projects-screenshots/financeme/1.png"],
+  { // 02. Fintech AI Assistant project
+    id: "fintech-ai-assistant",
+    category: "AI & Finance",
+    title: "Live Fintech AI Assistant - Stock Monitoring Service",
+    src: "/assets/projects-screenshots/AI Fintech/1.png",
+    screenshots: [
+      "/assets/projects-screenshots/AI Fintech/1.png",
+      "/assets/projects-screenshots/AI Fintech/2.png",
+      "/assets/projects-screenshots/AI Fintech/3.png",
+      "/assets/projects-screenshots/AI Fintech/4.png",
+      "/assets/projects-screenshots/AI Fintech/5.png",
+    ],
     skills: {
       frontend: [
-        PROJECT_SKILLS.html,
-        PROJECT_SKILLS.css,
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.bootstrap,
+        PROJECT_SKILLS.streamlit,
       ],
       backend: [
-        PROJECT_SKILLS.java,
-        PROJECT_SKILLS.maven,
-        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.pandas,
+        PROJECT_SKILLS.beautifulsoup,
       ],
     },
-    live: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
-    github: "https://github.com/Abhiz2411/FinanceMe-Devops-Project-01",
+    live: "https://fintech-x-pathway-aw5nsnt5ynswsfcqrhfpub.streamlit.app/",
+    github: "https://github.com/Yash11778/Fintech-x-Pathway",
     get content() {
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            FinanceMe: Complete DevOps Capstone Project
+            Live Fintech AI Assistant - Stock Monitoring Service
           </TypographyP>
           <TypographyP className="font-mono ">
-            This project demonstrates the deployment of a DevOps pipeline for a global banking and
-            financial services provider, FinanceMe. The company transitioned from a monolithic 
-            architecture to a microservice-based architecture to handle increased traffic and 
-            scaling challenges. The project involves automating infrastructure provisioning, build 
-            and deployment processes, and continuous monitoring using modern DevOps tools and 
-            AWS services.?
+            A real-time stock price monitoring service powered by web scraping and AI. 
+            This Fintech AI Assistant tracks live stock prices, provides market insights, and 
+            delivers intelligent financial analysis. Built with Python for backend processing, 
+            utilizing Pandas for data manipulation, BeautifulSoup4/Requests for web scraping, 
+            and Streamlit for an interactive frontend dashboard.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Project Overview</TypographyH3>
           <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
-            3.Continuous Monitoring
+            Key features include:
+            • Real-time stock price monitoring and tracking
+            • Web scraping for live market data collection
+            • Data processing and analysis with Pandas
+            • Interactive Streamlit dashboard for visualization
+            • AI-powered market insights and predictions
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/financeme/1.png`,
-              `${BASE_PATH}/financeme/2.png`,
+              `${BASE_PATH}/AI Fintech/1.png`,
+              `${BASE_PATH}/AI Fintech/2.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Real-Time Data Monitoring</TypographyH3>
           <p className="font-mono mb-2">
-          Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
+            Live stock price tracking with automatic updates. The system uses web scraping 
+            techniques with BeautifulSoup4 and Requests to fetch real-time market data from 
+            multiple sources, ensuring accurate and up-to-date information.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/financeme/4_A.png`,
-              `${BASE_PATH}/financeme/4.png`,
+              `${BASE_PATH}/AI Fintech/3.png`,
+              `${BASE_PATH}/AI Fintech/4.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Data Analysis & AI Insights</TypographyH3>
 
           <p className="font-mono mb-2">
-          Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
+            Powered by Pandas for efficient data manipulation and analysis. The AI assistant 
+            processes historical and real-time data to identify trends, patterns, and generate 
+            intelligent market predictions. Interactive visualizations help users understand 
+            complex financial data at a glance.
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/financeme/5.png`,
-              `${BASE_PATH}/financeme/6.png`,
-              `${BASE_PATH}/financeme/7.png`,
+              `${BASE_PATH}/AI Fintech/5.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Technical Implementation</TypographyH3>
           <p className="font-mono mb-2">
-          Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
+            Built with Python backend for robust data processing, web scraping capabilities 
+            for real-time data collection, and Streamlit for creating an intuitive and responsive 
+            frontend interface. The application provides seamless user experience with live updates 
+            and interactive visualizations.
           </p>
-          <SlideShow images={[
-                `${BASE_PATH}/financeme/3.png`,
-                `${BASE_PATH}/financeme/8.png`,
-                `${BASE_PATH}/financeme/9.png`,
-                `${BASE_PATH}/financeme/10.png`,
-            ]} />
         </div>
       );
     },
@@ -902,8 +932,8 @@ const projects: Project[] = [
     title: "My Portfolio",
     src: "/assets/projects-screenshots/myportfolio/landing.png",
     screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
-    live: "https://www.abhijitzende.com/",
-    github:"https://github.com/Abhiz2411/3D-interactive-portfolio",
+    live: "https://www.yashdharme.com/",
+    github:"https://github.com/Yash11778/3D-interactive-portfolio",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -962,108 +992,68 @@ const projects: Project[] = [
       );
     },
   },
-  { // 04. Smart parking assitant
-    id: "smartparkingassitant",
-    category: "IoT",
-    title: "Smart Parking Assistant",
-    src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
-    screenshots: ["01.jpeg", "03.png"],
-    live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github:"https://github.com/Abhiz2411/smart-parking-assistant",
+  { // 04. PayFi project
+    id: "payfi",
+    category: "Blockchain & Web3",
+    title: "PayFi - Decentralized Tipping Platform",
+    src: "/assets/projects-screenshots/payfi/payfi 1.png",
+    screenshots: ["payfi 1.png", "payfi 2.png", "payfi 3.png"],
+    live: "https://payfi-seven.vercel.app/",
+    github:"https://github.com/Yash11778/Tip-Jar",
     skills: {
-      frontend: [PROJECT_SKILLS.python],
-      backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
+      frontend: [
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.ethers,
+      ],
+      backend: [
+        PROJECT_SKILLS.hardhat,
+        PROJECT_SKILLS.solidity,
+        PROJECT_SKILLS.node,
+      ],
     },
     get content() {
       return (
         <div>
+          <TypographyP className="font-mono text-2xl text-center">
+            PayFi - Decentralized Tipping Platform
+          </TypographyP>
           <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino 
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI 
-            that visualizes availability and an intelligent system for quick, optimal decisions. 
-            Built to adapt with customizable hardware and Python-powered software for seamless 
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
+            A decentralized tipping application built with Next.js and smart contracts. PayFi uses 
+            Hardhat for Ethereum/blockchain development with a main TipJar.sol contract that handles 
+            cryptocurrency tips. The project includes both frontend components (Next.js with Tailwind CSS) 
+            and backend services for interacting with the blockchain, with deployment scripts for various networks.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
+          
+          <TypographyH3 className="my-4 mt-8">Technology Stack</TypographyH3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+            <div>
+              <p className="font-mono font-bold mb-2">Frontend:</p>
+              <ul className="list-disc list-inside font-mono space-y-1">
+                <li>Next.js - React framework</li>
+                <li>Tailwind CSS - Styling</li>
+                <li>ethers.js - Ethereum blockchain interaction</li>
+                <li>React - UI library</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-mono font-bold mb-2">Backend:</p>
+              <ul className="list-disc list-inside font-mono space-y-1">
+                <li>Hardhat - Ethereum development environment</li>
+                <li>Solidity - Smart contract programming language</li>
+                <li>Ethers.js - Blockchain interaction library</li>
+                <li>Node.js - Runtime environment</li>
+              </ul>
+            </div>
+          </div>
+
           <SlideShow
             images={[
-              `${BASE_PATH}/smartparkingassitant/01.jpeg`,
-              `${BASE_PATH}/smartparkingassitant/03.png`,
-              `${BASE_PATH}/smartparkingassitant/04.jpg`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 05. Smart Job Tracker project
-    id: "smartjobtracker",
-    category: "Full stack",
-    title: "Smart Job Tracker",
-    src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png","06.png","07.png"],
-    live: "https://job-tracker-application-eight.vercel.app/",
-    github:"https://github.com/Abhiz2411/Job-tracker-application",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.firebase],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you 
-            manage, filter, and visualize your job search. Organize your applications with a 
-            Kanban board, monitor progress through status updates, and store everything securely. 
-            Enjoy seamless access across devices with a responsive design and email reminders for 
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/smartjobtracker/01.png`,
-              `${BASE_PATH}/smartjobtracker/02.png`,
-              `${BASE_PATH}/smartjobtracker/03.png`,
-              `${BASE_PATH}/smartjobtracker/04.png`,
-              `${BASE_PATH}/smartjobtracker/05.png`,
-              `${BASE_PATH}/smartjobtracker/06.png`,
-              `${BASE_PATH}/smartjobtracker/07.png`,
-            ]}
-          />
-        </div>
-      );
-    },
-  },
-  { // 06. Savinder Puri portfolio project
-    id: "savinderpurisportfolio",
-    category: "Web Development",
-    title: "Savinder Puri Portfolio",
-    src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png"],
-    live: "https://savinder-puri.vercel.app/",
-    github:"https://github.com/Abhiz2411/savinder-puri",
-    skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual 
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey, 
-            milestones, and life-changing services blending tech and spirituality. Built with 
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who 
-            transforms lives. 💻🕊️ Crafted with ❤️ by Abhijit Zende! 🚀
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <SlideShow
-            images={[
-              `${BASE_PATH}/savinderpuriportfolio/01.png`,
-              `${BASE_PATH}/savinderpuriportfolio/02.png`,
-              `${BASE_PATH}/savinderpuriportfolio/03.png`,
-              `${BASE_PATH}/savinderpuriportfolio/04.png`,
-              `${BASE_PATH}/savinderpuriportfolio/05.png`,
+              `${BASE_PATH}/payfi/payfi 1.png`,
+              `${BASE_PATH}/payfi/payfi 2.png`,
+              `${BASE_PATH}/payfi/payfi 3.png`,
             ]}
           />
         </div>
@@ -1071,4 +1061,5 @@ const projects: Project[] = [
     },
   },
 ];
+
 export default projects;

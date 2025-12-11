@@ -31,11 +31,11 @@ const links: Link[] = [
   //   href: '/testimonials',
   //   thumbnail: '/assets/nav-link-previews/testimonials.png'
   // },
-  {
-    title: 'Blogs',
-    href: '/blogs',
-    thumbnail: '/assets/nav-link-previews/blog.png',
-  },
+  // {
+  //   title: 'Blogs',
+  //   href: '/blogs',
+  //   thumbnail: '/assets/nav-link-previews/blog.png',
+  // },
   {
     title: 'Contact',
     href: '/#contact',

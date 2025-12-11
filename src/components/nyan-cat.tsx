@@ -7,12 +7,14 @@ import {
   animate,
   useAnimationControls,
 } from "framer-motion";
+import { useAchievements } from "@/components/achievements/achievement-system";
 
 const getRandomHeight = () => {
   return `${Math.random() * 100}vh`;
 };
 
 const NyanCat = () => {
+  const { unlock } = useAchievements();
   const [divs, setDivs] = useState<
     {
       id: string;
@@ -24,6 +26,11 @@ const NyanCat = () => {
       id: (Math.random() * 100000).toFixed(),
     };
     setDivs((prevDivs) => [...prevDivs, newDiv]);
+    
+    // Unlock achievement on first spawn
+    if (divs.length === 0) {
+      unlock("nyan-cat-finder");
+    }
   };
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
