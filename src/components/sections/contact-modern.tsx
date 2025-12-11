@@ -45,7 +45,7 @@ export default function ContactSectionModern() {
           className="text-center mb-16"
         >
           <h2 className="text-6xl md:text-8xl font-bold mb-6">
-            <span className="text-black dark:text-white">LET'S WORK</span>
+            <span className="text-black dark:text-white">LET&apos;S WORK</span>
             <br />
             <span className="text-black dark:text-white">TOGETHER</span>
           </h2>
@@ -164,7 +164,7 @@ export default function ContactSectionModern() {
                 Send a Message
               </h3>
               <p className="text-white/80 mb-8">
-                Fill out the form below and I'll get back to you as soon as possible.
+                Fill out the form below and I&apos;ll get back to you as soon as possible.
               </p>
               <ContactForm />
             </GlassCard>
