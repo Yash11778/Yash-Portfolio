@@ -20,7 +20,7 @@ const ProjectsSection = () => {
     <section id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
       <Link href={"#projects"}>
         <h2
-          className=\"text-4xl text-center md:text-7xl pt-16 mb-32 text-black dark:text-white font-bold\"
+          className="text-4xl text-center md:text-7xl pt-16 mb-32 text-black dark:text-white font-bold"
         >
           Projects
         </h2>

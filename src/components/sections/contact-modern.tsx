@@ -50,7 +50,7 @@ export default function ContactSectionModern() {
             <span className="text-black dark:text-white">TOGETHER</span>
           </h2>
           <p className="text-xl md:text-2xl text-black/70 dark:text-white/70 max-w-2xl mx-auto">
-            Have a project in mind? Drop me a message and let's create something amazing!
+            Have a project in mind? Drop me a message and let&apos;s create something amazing!
           </p>
         </motion.div>
 
@@ -67,7 +67,7 @@ export default function ContactSectionModern() {
                 Get in Touch
               </h3>
               <p className="text-lg text-black/70 dark:text-white/70 mb-8">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
               </p>
             </motion.div>
 
