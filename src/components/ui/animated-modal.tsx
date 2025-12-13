@@ -11,6 +11,7 @@ import React, {
 } from "react";
 import { ScrollArea } from "./scroll-area";
 
+// Modal components for interactive popups
 interface ModalContextType {
   open: boolean;
   setOpen: (open: boolean) => void;
@@ -68,25 +69,28 @@ export const ModalBody = ({
   children: ReactNode;
   className?: string;
 }) => {
-  const { open, setOpen } = useModal();
+  const modalContext = useModal();
+  const { open, setOpen } = modalContext;
+  const modalRef = useRef(null);
 
   useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    
     if (typeof window !== "undefined") {
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") setOpen(false);
-      });
+      document.addEventListener("keydown", handleEscape);
+      return () => document.removeEventListener("keydown", handleEscape);
     }
   }, [setOpen]);
+
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
+    document.body.style.overflow = open ? "hidden" : "auto";
+    return () => {
       document.body.style.overflow = "auto";
-    }
+    };
   }, [open]);
 
-  const modalRef = useRef(null);
-  const { setOpen } = useModal();
   useOutsideClick(modalRef, () => setOpen(false));
 
   return (
