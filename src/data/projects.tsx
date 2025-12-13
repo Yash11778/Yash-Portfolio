@@ -811,8 +811,8 @@ const projects: Project[] = [
     title: "Hackronyx Website",
     src: "/assets/projects-screenshots/HacKronyX/2.png",
     screenshots: ["1.png", "2.png", "3.png"],
-    live: "https://vercel.com/yash-dharmes-projects-b0a8a3a0/hackronyx",
-    github:"https://github.com/Yash11778/hackronyx",
+    live: "https://hackronyx-beta.vercel.app/",
+    github:"https://github.com/Yash11778/Final",
     skills: {
       frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
       backend: [],
@@ -931,8 +931,8 @@ const projects: Project[] = [
     title: "My Portfolio",
     src: "/assets/projects-screenshots/myportfolio/landing.png",
     screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
-    live: "https://www.yashdharme.com/",
-    github:"https://github.com/Yash11778/3D-interactive-portfolio",
+    live: "https://yash-portfolio-c6cb.vercel.app/",
+    github:"https://github.com/Yash11778/Yash-Portfolio",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,

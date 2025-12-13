@@ -14,7 +14,7 @@ const PROJECTS = [
     id: 1,
     name: "Hackronyx Website",
     description: `Hackronyx is a modern web application built with cutting-edge technologies like Next.js and Tailwind CSS. This project showcases responsive design, interactive features, and seamless user experience with smooth animations. Built with performance in mind and deployed on Vercel for optimal speed and reliability. Features include real-world problem-solving capabilities, industry standard practices, and networking opportunities for professionals.`,
-    link: "https://github.com/Yash11778/HacKronyX",
+    link: "https://github.com/Yash11778/Final",
     liveUrl: "https://hackronyx-beta.vercel.app/",
     images: [
       "/assets/projects-screenshots/HacKronyX/1.png",
@@ -44,8 +44,8 @@ const PROJECTS = [
     name: "Portfolio",
     description: `Welcome to my digital playground, where creativity meets code in the
             dopest way possible.`,
-    link: "https://github.com/Yash11778/3D-interactive-portfolio",
-    liveUrl: "https://www.yashdharme.com/",
+    link: "https://github.com/Yash11778/Yash-Portfolio",
+    liveUrl: "https://yash-portfolio-c6cb.vercel.app/",
     images: [
       "/assets/projects-screenshots/myportfolio/landing.png"
     ],
