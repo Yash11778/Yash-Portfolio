@@ -11,16 +11,16 @@ interface GlassCardProps {
   gradient?: boolean;
 }
 
-export function GlassCard({ 
-  children, 
-  depth = "medium", 
+export function GlassCard({
+  children,
+  depth = "medium",
   className,
-  gradient = true 
+  gradient = true
 }: GlassCardProps) {
   const depthStyles = {
-    subtle: "backdrop-blur-sm bg-white/5 border-white/10",
-    medium: "backdrop-blur-md bg-white/10 border-white/20",
-    strong: "backdrop-blur-lg bg-white/15 border-white/30",
+    subtle: "backdrop-blur-sm bg-white/5 border-black/5 dark:border-white/10",
+    medium: "backdrop-blur-md bg-white/10 border-black/10 dark:border-white/20",
+    strong: "backdrop-blur-lg bg-white/15 border-black/10 dark:border-white/30",
   };
 
   return (

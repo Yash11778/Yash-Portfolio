@@ -40,7 +40,7 @@ type SocketContextType = {
 const INITIAL_STATE: SocketContextType = {
   socket: null,
   users: new Map(),
-  setUsers: () => {},
+  setUsers: () => { },
   msgs: [],
 };
 
@@ -53,18 +53,35 @@ const SocketContextProvider = ({ children }: { children: ReactNode }) => {
 
   // SETUP SOCKET.IO
   useEffect(() => {
-    const username =  localStorage.getItem("username") || generateRandomCursor().name
-    const socket = io(process.env.NEXT_PUBLIC_WS_URL!, {
-      query: { username },
-    });
-    setSocket(socket);
-    socket.on("connect", () => {});
-    socket.on("msgs-receive-init", (msgs) => {
-      setMsgs(msgs);
-    });
-    socket.on("msg-receive", (msgs) => {
-      setMsgs((p) => [...p, msgs]);
-    });
+    const username = localStorage.getItem("username") || generateRandomCursor().name
+    const url = process.env.NEXT_PUBLIC_WS_URL;
+    if (!url) {
+      console.warn("Socket URL not defined, skipping connection");
+      return;
+    }
+
+    try {
+      const socket = io(url, {
+        query: { username },
+        reconnectionAttempts: 3,
+        timeout: 5000,
+      });
+      setSocket(socket);
+
+      socket.on("connect_error", (err) => {
+        console.warn("Socket connection failed:", err.message);
+      });
+
+      socket.on("connect", () => { });
+      socket.on("msgs-receive-init", (msgs) => {
+        setMsgs(msgs);
+      });
+      socket.on("msg-receive", (msgs) => {
+        setMsgs((p) => [...p, msgs]);
+      });
+    } catch (e) {
+      console.error("Socket initialization failed", e);
+    }
     return () => {
       socket.disconnect();
     };

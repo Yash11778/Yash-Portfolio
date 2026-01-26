@@ -49,17 +49,6 @@ const skillCategories = [
       { name: "VS Code", level: 95 },
       { name: "Postman", level: 80 },
     ]
-  },
-  {
-    title: "3D & Animation",
-    color: "green" as const,
-    skills: [
-      { name: "Spline", level: 60 },
-      { name: "Three.js", level: 65 },
-      { name: "GSAP", level: 55 },
-      { name: "Blender", level: 65 },
-      { name: "WebGL", level: 55 },
-    ]
   }
 ];
 
@@ -89,15 +78,26 @@ export default function SkillsSectionModern() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20 relative rounded-3xl overflow-hidden border-4 border-black dark:border-white shadow-neo-lg"
+          className="mb-20 relative rounded-3xl overflow-hidden border-4 border-black dark:border-white shadow-neo-lg bg-gradient-to-br from-[#667eea] to-[#764ba2]"
           style={{
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            height: '650px'
+            minHeight: '300px', // Fallback
           }}
         >
-          <KeyboardViewer />
-          
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center pointer-events-none z-10 bg-white/90 px-8 py-4 rounded-full border-3 border-black shadow-neo">
+          {/* Desktop 3D View */}
+          <div className="hidden md:block h-[650px] w-full">
+            <KeyboardViewer />
+          </div>
+
+          {/* Mobile Placeholder View */}
+          <div className="block md:hidden h-[300px] w-full flex items-center justify-center p-8">
+            <div className="text-center text-white">
+              <div className="text-6xl mb-4">⌨️✨</div>
+              <h3 className="text-2xl font-bold mb-2">Interactive 3D Experience</h3>
+              <p className="opacity-80">Switch to desktop to play with the 3D keyboard!</p>
+            </div>
+          </div>
+
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-center pointer-events-none z-10 bg-white/90 px-8 py-4 rounded-full border-3 border-black shadow-neo hidden md:block">
             <p className="text-black text-lg md:text-xl font-bold">
               Press any key! ⌨️✨
             </p>
@@ -113,6 +113,9 @@ export default function SkillsSectionModern() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+              className={cn(
+                categoryIndex === skillCategories.length - 1 && skillCategories.length % 2 !== 0 ? "md:col-span-2" : ""
+              )}
             >
               <NeoBrutalistCard
                 color={category.color}
@@ -147,10 +150,7 @@ export default function SkillsSectionModern() {
                           transition={{ duration: 1, delay: skillIndex * 0.05, ease: "easeOut" }}
                           className={cn(
                             "h-full rounded-full relative overflow-hidden",
-                            category.color === "yellow" && "bg-neo-yellow",
-                            category.color === "blue" && "bg-neo-blue",
-                            category.color === "pink" && "bg-neo-pink",
-                            category.color === "green" && "bg-neo-green"
+                            category.color === "yellow" ? "bg-black" : "bg-white"
                           )}
                           style={{
                             boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.2)'

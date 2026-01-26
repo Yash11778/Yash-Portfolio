@@ -34,7 +34,7 @@ export default function ContactSectionModern() {
     <section id="contact" className="relative w-full min-h-screen py-20 px-4 bg-gradient-to-br from-neo-blue/20 via-slate-50 to-neo-purple/20 dark:from-neo-blue/5 dark:via-black dark:to-neo-purple/5 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 neo-grid opacity-30" />
-      
+
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Header */}
         <motion.div
@@ -88,7 +88,7 @@ export default function ContactSectionModern() {
                             <info.icon className="w-6 h-6 text-black dark:text-white" />
                           </div>
                           <div>
-                            <p className="text-sm font-semibold text-black/60 dark:text-white/60">
+                            <p className="text-sm font-semibold text-black/80 dark:text-white/60">
                               {info.label}
                             </p>
                             <p className="text-lg font-bold text-black dark:text-white">
@@ -105,7 +105,7 @@ export default function ContactSectionModern() {
                           <info.icon className="w-6 h-6 text-black dark:text-white" />
                         </div>
                         <div>
-                          <p className="text-sm font-semibold text-black/60 dark:text-white/60">
+                          <p className="text-sm font-semibold text-black/80 dark:text-white/60">
                             {info.label}
                           </p>
                           <p className="text-lg font-bold text-black dark:text-white">
@@ -127,7 +127,7 @@ export default function ContactSectionModern() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="pt-8"
             >
-              <p className="text-sm font-semibold text-black/60 dark:text-white/60 mb-4">
+              <p className="text-sm font-semibold text-black/80 dark:text-white/60 mb-4">
                 Or find me on social media
               </p>
               <div className="flex gap-4">
@@ -160,10 +160,10 @@ export default function ContactSectionModern() {
             transition={{ duration: 0.6 }}
           >
             <GlassCard depth="strong" gradient className="p-8 lg:p-10">
-              <h3 className="text-3xl font-bold mb-6 text-white">
+              <h3 className="text-3xl font-bold mb-6 text-black dark:text-white">
                 Send a Message
               </h3>
-              <p className="text-white/80 mb-8">
+              <p className="text-black/80 dark:text-white/80 mb-8">
                 Fill out the form below and I&apos;ll get back to you as soon as possible.
               </p>
               <ContactForm />

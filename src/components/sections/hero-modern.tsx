@@ -17,7 +17,7 @@ const HeroSectionModern = () => {
     <section id="hero" className="relative min-h-screen w-full overflow-hidden bg-slate-50 dark:bg-slate-950">
       {/* Background elements */}
       <div className="absolute inset-0 neo-grid opacity-30 dark:opacity-10" />
-      
+
       {/* Floating gradient orbs */}
       <div className="absolute top-20 -left-20 w-96 h-96 bg-neo-purple rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
       <div className="absolute bottom-20 -right-20 w-96 h-96 bg-neo-pink rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000" />
@@ -50,10 +50,10 @@ const HeroSectionModern = () => {
                   className="space-y-4"
                 >
                   <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none font-space">
-                    <span className="block transform hover:scale-105 transition-transform origin-left cursor-default">
+                    <span className="block transform hover:scale-105 transition-transform origin-left cursor-default mb-2">
                       {config.author.split(" ")[0].toUpperCase()}
                     </span>
-                    <span className="inline-block bg-neo-yellow neo-border shadow-neo-lg px-4 rotate-[1deg] hover:rotate-0 transition-transform cursor-default">
+                    <span className="inline-block bg-neo-yellow neo-border shadow-neo-lg px-4 -ml-2 rotate-[1deg] hover:rotate-0 transition-transform cursor-default">
                       {config.author.split(" ")[1].toUpperCase()}
                     </span>
                   </h1>
@@ -84,7 +84,7 @@ const HeroSectionModern = () => {
                       <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </NeoBrutalistButton>
                   </Link>
-                  
+
                   <Link href="#contact">
                     <NeoBrutalistButton variant="outline">
                       CONTACT ME

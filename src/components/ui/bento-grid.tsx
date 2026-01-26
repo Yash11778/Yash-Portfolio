@@ -40,8 +40,8 @@ export function BentoCard({
       className={cn(
         "relative rounded-3xl p-6",
         "bg-white dark:bg-gray-900",
-        "border border-gray-200 dark:border-gray-800",
-        "shadow-sm transition-all duration-300",
+        "border border-gray-300 dark:border-gray-800",
+        "shadow-md dark:shadow-sm transition-all duration-300",
         interactive && "hover:shadow-lg hover:-translate-y-1",
         "overflow-hidden",
         span,

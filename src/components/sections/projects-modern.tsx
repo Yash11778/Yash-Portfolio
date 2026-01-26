@@ -36,7 +36,7 @@ const ProjectsSectionModern = () => {
           {featuredProjects.map((project: any, idx: number) => {
             // Vary the span for visual interest
             const spans = [
-              "md:col-span-6 lg:col-span-6 md:row-span-2",
+              "md:col-span-6 lg:col-span-6",
               "md:col-span-3 lg:col-span-3",
               "md:col-span-3 lg:col-span-3",
               "md:col-span-4 lg:col-span-4",
