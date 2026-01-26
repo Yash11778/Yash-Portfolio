@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "h4pOUb1lzmN1xJhHQE7fXfz2RnMVHvYYICZwQVyKvAM",
+  },
 };
 
 const archivoBlack = Archivo_Black({
