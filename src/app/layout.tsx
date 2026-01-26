@@ -55,6 +55,11 @@ export const metadata: Metadata = {
   verification: {
     google: "h4pOUb1lzmN1xJhHQE7fXfz2RnMVHvYYICZwQVyKvAM",
   },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 const archivoBlack = Archivo_Black({
