@@ -1,9 +1,9 @@
 const config = {
   title: "Yash Dharme | Full Stack Developer",
   description: {
-    long: "Explore the portfolio of Yash Dharme, a Computer Science Engineer with 1.5 year experience in Development with hands-on experience in deploying & automating workflows. Strong analytical skills, effective communication, and a team-oriented approach to driving process improvements and delivering results.",
+    long: "Portfolio of Yash Dharme, a Full Stack Developer building immersive and interactive web experiences. Specializing in modern frontend technologies, and performant backend systems. Explore my projects featuring React, and creative solutions.",
     short:
-      "Discover the portfolio of Yash Dharme, an Full Stack Developer solving real life problems in Development.",
+      "Portfolio of Yash Dharme, a Full Stack Developer building immersive and interactive web experiences.",
   },
   keywords: [
     "Yash",
