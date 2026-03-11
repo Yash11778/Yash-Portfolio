@@ -85,11 +85,11 @@ const HeroSectionModern = () => {
                     </NeoBrutalistButton>
                   </Link>
 
-                  <Link href="#contact">
-                    <NeoBrutalistButton variant="outline">
-                      CONTACT ME
+                  <a href={config.resume} target="_blank" rel="noopener noreferrer">
+                    <NeoBrutalistButton color="pink" variant="primary">
+                      RESUME
                     </NeoBrutalistButton>
-                  </Link>
+                  </a>
                 </motion.div>
 
                 {/* Social links */}

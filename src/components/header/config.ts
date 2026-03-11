@@ -40,6 +40,11 @@ const links: Link[] = [
     title: 'Contact',
     href: '/#contact',
     thumbnail: '/assets/nav-link-previews/contact.png'
+  },
+  {
+    title: 'Resume',
+    href: 'https://drive.google.com/file/d/1m3omi0JFg6DJ91r8eaFbuIhsuP5Mp8Fq/view?usp=sharing',
+    thumbnail: '/assets/nav-link-previews/contact.png' // using contact as placeholder
   }
 ];
 

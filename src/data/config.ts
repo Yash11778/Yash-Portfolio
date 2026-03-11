@@ -44,5 +44,6 @@ const config = {
     facebook: "https://www.facebook.com/share/1JRDymJ836/",
     github: "https://github.com/Yash11778",
   },
+  resume: "https://drive.google.com/file/d/1m3omi0JFg6DJ91r8eaFbuIhsuP5Mp8Fq/view?usp=sharing",
 };
 export { config };
