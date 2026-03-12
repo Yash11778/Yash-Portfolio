@@ -19,8 +19,8 @@ const HeroSectionModern = () => {
       <div className="absolute inset-0 neo-grid opacity-30 dark:opacity-10" />
 
       {/* Floating gradient orbs */}
-      <div className="absolute top-20 -left-20 w-96 h-96 bg-neo-purple rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-      <div className="absolute bottom-20 -right-20 w-96 h-96 bg-neo-pink rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000" />
+      <div className="absolute top-20 -left-20 w-96 h-96 bg-neo-purple rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse will-change-[opacity,transform]" />
+      <div className="absolute bottom-20 -right-20 w-96 h-96 bg-neo-pink rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000 will-change-[opacity,transform]" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-8 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center min-h-[calc(100vh-10rem)]">

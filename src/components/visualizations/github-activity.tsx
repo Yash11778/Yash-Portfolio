@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useEffect, useState } from "react";
+import { GitHubCalendar } from "react-github-calendar";
+import { useTheme } from "next-themes";
 
 interface GitHubActivityProps {
   username?: string;
@@ -17,19 +19,36 @@ interface GitHubStats {
 export function GitHubActivity({ username = "Yash11778" }: GitHubActivityProps) {
   const [stats, setStats] = useState<GitHubStats | null>(null);
   const [loading, setLoading] = useState(true);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     const fetchGitHubStats = async () => {
       try {
-        const response = await fetch(`https://api.github.com/users/${username}`);
-        if (response.ok) {
-          const data = await response.json();
-          setStats({
-            totalContributions: 149, // From your GitHub profile
-            publicRepos: data.public_repos,
-            followers: data.followers,
-          });
+        const [userResponse, contributionsResponse] = await Promise.all([
+          fetch(`https://api.github.com/users/${username}`),
+          fetch(`https://github-contributions-api.deno.dev/${username}.json`)
+        ]);
+
+        let totalContributions = 0;
+        let publicRepos = 0;
+        let followers = 0;
+
+        if (userResponse.ok) {
+          const userData = await userResponse.json();
+          publicRepos = userData.public_repos;
+          followers = userData.followers;
         }
+
+        if (contributionsResponse.ok) {
+          const contributionsData = await contributionsResponse.json();
+          totalContributions = contributionsData.totalContributions || 0;
+        }
+
+        setStats({
+          totalContributions,
+          publicRepos,
+          followers,
+        });
       } catch (error) {
         console.error("Failed to fetch GitHub stats:", error);
       } finally {
@@ -113,7 +132,14 @@ export function GitHubActivity({ username = "Yash11778" }: GitHubActivityProps) 
             </div>
           )}
           
-          <div className="mt-6 text-center">
+          <div className="mt-8 p-6 bg-white dark:bg-black/50 rounded-2xl border-3 border-black dark:border-white w-full overflow-x-auto flex justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+            <GitHubCalendar 
+              username={username}
+              colorScheme={resolvedTheme === "dark" ? "dark" : "light"}
+            />
+          </div>
+
+          <div className="mt-8 text-center">
             <a
               href={`https://github.com/${username}`}
               target="_blank"

@@ -201,7 +201,8 @@ function ElasticCursor() {
         )}
         style={{
           zIndex: 100,
-          backdropFilter: "invert(100%)",
+          mixBlendMode: "difference",
+          backgroundColor: "rgba(255, 255, 255, 1)",
         }}
       ></div>
       <div
@@ -209,7 +210,8 @@ function ElasticCursor() {
         style={{
           top: y,
           left: x,
-          backdropFilter: "invert(100%)",
+          mixBlendMode: "difference",
+          backgroundColor: "rgba(255, 255, 255, 1)",
         }}
       ></div>
     </>

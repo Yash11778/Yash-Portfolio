@@ -98,7 +98,7 @@ export default function RootLayout({
         >
           <Particles
             className="fixed inset-0 -z-10 animate-fade-in"
-            quantity={100}
+            quantity={40}
           />
           <AchievementProvider>
             <Preloader>
