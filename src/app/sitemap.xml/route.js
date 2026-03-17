@@ -1,5 +1,5 @@
 export async function GET() {
-    const baseUrl = 'https://yash-dharme.vercel.app';
+    const baseUrl = 'https://www.yashdharme.tech';
 
     const pages = [
         '',

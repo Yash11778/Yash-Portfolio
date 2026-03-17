@@ -60,6 +60,9 @@ export const metadata: Metadata = {
     shortcut: "/logo.png",
     apple: "/logo.png",
   },
+  alternates: {
+    canonical: "https://www.yashdharme.tech",
+  },
   manifest: "/manifest.json",
 };
 
