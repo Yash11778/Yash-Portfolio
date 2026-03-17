@@ -15,6 +15,7 @@ import BackToTop from "@/components/back-to-top";
 import { AchievementProvider } from "@/components/achievements/achievement-system";
 import { AchievementBadge } from "@/components/achievements/achievement-badge";
 import dynamic from "next/dynamic";
+import JsonLd from "@/components/seo/JsonLd";
 
 // Lazy load heavy/optional components
 const ElasticCursor = dynamic(() => import("@/components/ui/ElasticCursor"), { ssr: false });
@@ -24,7 +25,10 @@ const SocketContextProvider = dynamic(() => import("@/contexts/socketio"), { ssr
 const RemoteCursors = dynamic(() => import("@/components/realtime/remote-cursors"), { ssr: false });
 
 export const metadata: Metadata = {
-  title: config.title,
+  title: {
+    default: config.title,
+    template: `%s | ${config.author}`
+  },
   description: config.description.long,
   keywords: config.keywords,
   authors: [{ name: config.author }],
@@ -86,6 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={[archivoBlack.variable, spaceGrotesk.variable].join(" ")}>
       <head>
+        <JsonLd />
         <Script
           defer
           src={process.env.UMAMI_DOMAIN}
