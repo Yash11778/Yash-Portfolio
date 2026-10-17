@@ -1,0 +1,52 @@
+const config = {
+  title: "Yash Dharme | Full Stack Developer & AI Builder",
+  description: {
+    long: "Portfolio of Yash Dharme — Full Stack Developer, AI Builder, and Web3 enthusiast from Nagpur, India. Building production-grade SaaS platforms, AI-powered tools, and blockchain applications. Explore projects in React, Next.js, Node.js, Python, and Solidity.",
+    short: "Full Stack Developer & AI Builder from Nagpur, India. React · Next.js · Node.js · Python · Web3.",
+  },
+  keywords: [
+    "Yash Dharme",
+    "yashdharme",
+    "yashdharme.tech",
+    "Yash Dharme portfolio",
+    "Full Stack Developer Nagpur",
+    "React developer India",
+    "Next.js developer",
+    "Node.js developer",
+    "AI developer",
+    "LLM API integration",
+    "blockchain developer",
+    "Solidity developer",
+    "Web3 developer",
+    "SaaS developer",
+    "QuantLabs",
+    "SkillPilot",
+    "FoodSense",
+    "Daemons Build",
+    "SVPCET",
+    "Python developer",
+    "NLP developer",
+    "Computer Vision",
+    "Docker",
+    "MongoDB",
+    "FastAPI",
+  ],
+  author: "Yash Dharme",
+  email: "yashdharme6@gmail.com",
+  phone: "+91-9923171129",
+  location: "Nagpur, Maharashtra, India",
+  site: "https://www.yashdharme.tech",
+  tagline: "Full Stack Developer · AI Builder · Web3 Enthusiast",
+
+  get ogImg() {
+    return this.site + "/assets/seo/og-image.png";
+  },
+  social: {
+    github: "https://github.com/Yash11778",
+    linkedin: "https://www.linkedin.com/in/yash-dharme/",
+    twitter: "https://x.com/Yash_1177",
+    instagram: "https://www.instagram.com/ig_yash117?igsh=NnY4dXBzd3RhNmFm",
+  },
+  resume: "https://drive.google.com/file/d/1ihyqTqfvu85dT2LfOa7gsWRiiibv-ltU/view?usp=sharing",
+};
+export { config };
