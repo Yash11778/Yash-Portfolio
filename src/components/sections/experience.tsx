@@ -2,9 +2,21 @@
 
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap, Calendar } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const experiences = [
+const experiences: {
+  type: string;
+  title: string;
+  org: string;
+  period: string;
+  status: string;
+  statusStyle: string;
+  accent: string;
+  image: string;
+  desc: string;
+  tags: string[];
+}[] = [
   {
     type: "work",
     title: "Co-Founder & Full-Stack Dev",
@@ -13,6 +25,7 @@ const experiences = [
     status: "Co-Founder",
     statusStyle: "bg-violet-50 dark:bg-violet-950/50 text-violet-700 dark:text-violet-400 border border-violet-200 dark:border-violet-800/60",
     accent: "bg-violet-400",
+    image: "/assets/experience/daemons.webp",
     desc: "Co-founded a product studio. Full product lifecycle from system design to client delivery, team leadership.",
     tags: ["Next.js", "Node.js", "MongoDB", "SaaS"],
   },
@@ -24,6 +37,7 @@ const experiences = [
     status: "Intern",
     statusStyle: "bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-400 border border-blue-200 dark:border-blue-800/60",
     accent: "bg-blue-400",
+    image: "/assets/experience/barodynamics.webp",
     desc: "Built full-stack SaaS platforms across Automotive, Real Estate & FinTech sectors.",
     tags: ["React.js", "Node.js", "MongoDB", "Cloud"],
   },
@@ -35,6 +49,7 @@ const experiences = [
     status: "Intern",
     statusStyle: "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60",
     accent: "bg-emerald-400",
+    image: "/assets/experience/wincapital.webp",
     desc: "Trading dashboard UI, TradingView charts integration, real-time market feeds & NLP pipeline coordination.",
     tags: ["React.js", "TradingView", "NLP", "Real-time"],
   },
@@ -46,6 +61,7 @@ const experiences = [
     status: "Intern",
     statusStyle: "bg-cyan-50 dark:bg-cyan-950/50 text-cyan-700 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-800/60",
     accent: "bg-cyan-400",
+    image: "/assets/experience/matverse.webp",
     desc: "Engineered a 7-stage AI irrigation advisory system for smallholder farmers integrating CHIRPS, ERA5, SMAP, Random Forests, and PINNs. Delivered real-time predictive alerts with 97.1% accuracy, 98.9% precision, and a 0.984 F1-score.",
     tags: ["AI", "Random Forests", "Machine Learning"],
   },
@@ -57,6 +73,7 @@ const experiences = [
     status: "Hybrid",
     statusStyle: "bg-orange-50 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60",
     accent: "bg-orange-400",
+    image: "/assets/experience/trustfintech.webp",
     desc: "Built 5+ responsive UI components, improved frontend performance ~30%, integrated REST APIs.",
     tags: ["React.js", "REST APIs", "Performance"],
   },
@@ -68,6 +85,7 @@ const experiences = [
     status: "CGPA 8.82",
     statusStyle: "bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 border border-amber-200 dark:border-amber-800/60",
     accent: "bg-amber-400",
+    image: "/assets/experience/svpcet.webp",
     desc: "Top performer with CGPA 8.82. Core subjects: DSA, AI, DBMS, Software Engineering, Computer Networks.",
     tags: ["DSA", "AI", "DBMS", "Software Engineering"],
   }
@@ -119,6 +137,16 @@ export default function ExperienceSection() {
 
                   {/* Card */}
                   <div className="relative overflow-hidden bg-white dark:bg-[#111] rounded-2xl border border-gray-100 dark:border-gray-800 p-6 sm:p-8 hover:shadow-lg dark:hover:shadow-black/40 hover:border-gray-200 dark:hover:border-gray-700 transition-all duration-300">
+                    {/* Themed background */}
+                    <Image
+                      src={exp.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 960px, 100vw"
+                      className="pointer-events-none select-none object-cover object-right origin-right transition-transform duration-700 group-hover:scale-[1.03]"
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-white/70 lg:bg-transparent lg:bg-gradient-to-r lg:from-white/80 lg:via-white/30 lg:via-45% lg:to-transparent lg:to-60%" />
+
                     {/* Accent top bar that reveals on hover */}
                     <motion.div
                       className={cn("absolute top-0 left-0 right-0 h-0.5 origin-left", exp.accent)}
@@ -127,31 +155,29 @@ export default function ExperienceSection() {
                       transition={{ duration: 0.3 }}
                     />
 
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
-                      <div className="flex items-start gap-3">
-                        <div className="mt-0.5 p-2 rounded-lg bg-gray-100 dark:bg-gray-800 shrink-0">
-                          <Icon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-snug">{exp.title}</h3>
-                          <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mt-0.5">{exp.org}</p>
-                        </div>
+                    <div className="relative flex items-start gap-3 mb-4">
+                      <div className="mt-0.5 p-2 rounded-lg bg-white/80 border border-gray-100 dark:bg-gray-800 shrink-0">
+                        <Icon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                       </div>
-                      <div className="flex items-center gap-2 flex-wrap sm:shrink-0 sm:text-right">
-                        <span className={cn("text-xs font-semibold px-2.5 py-1 rounded-full", exp.statusStyle)}>
-                          {exp.status}
-                        </span>
-                        <span className="text-xs text-gray-400 flex items-center gap-1 whitespace-nowrap">
-                          <Calendar className="w-3 h-3" />{exp.period}
-                        </span>
+                      <div>
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white leading-snug">{exp.title}</h3>
+                        <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 mt-0.5">{exp.org}</p>
+                        <div className="flex items-center gap-2 flex-wrap mt-2">
+                          <span className={cn("text-xs font-semibold px-2.5 py-1 rounded-full", exp.statusStyle)}>
+                            {exp.status}
+                          </span>
+                          <span className="text-xs text-gray-500 flex items-center gap-1 whitespace-nowrap">
+                            <Calendar className="w-3 h-3" />{exp.period}
+                          </span>
+                        </div>
                       </div>
                     </div>
 
-                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 ml-11">{exp.desc}</p>
+                    <p className="relative text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 ml-11 lg:max-w-[54%]">{exp.desc}</p>
 
-                    <div className="flex flex-wrap gap-2 ml-11">
+                    <div className="relative flex flex-wrap gap-2 ml-11 lg:max-w-[54%]">
                       {exp.tags.map(tag => (
-                        <span key={tag} className="px-2.5 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg">
+                        <span key={tag} className="px-2.5 py-1 text-xs font-medium bg-white/80 border border-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg">
                           {tag}
                         </span>
                       ))}
