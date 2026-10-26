@@ -26,7 +26,7 @@ export default function ContactSectionModern() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-xs font-bold tracking-[0.25em] text-gray-400 uppercase">05 — Contact</span>
+            <span className="text-xs font-bold tracking-[0.25em] text-gray-400 uppercase">06 — Contact</span>
             <div className="flex-1 h-px bg-gray-100 dark:bg-gray-800" />
           </div>
           <h2 className="text-6xl sm:text-7xl font-black text-gray-900 dark:text-white leading-[0.9] tracking-tight">

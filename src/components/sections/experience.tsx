@@ -7,28 +7,6 @@ import { cn } from "@/lib/utils";
 const experiences = [
   {
     type: "work",
-    title: "Frontend & Integration Lead",
-    org: "Win Capital Funds",
-    period: "Mar 2026 – Sep 2026",
-    status: "Intern",
-    statusStyle: "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60",
-    accent: "bg-emerald-400",
-    desc: "Trading dashboard UI, TradingView charts integration, real-time market feeds & NLP pipeline coordination.",
-    tags: ["React.js", "TradingView", "NLP", "Real-time"],
-  },
-  {
-    type: "work",
-    title: "AI/ML Intern",
-    org: "Matverse Vision Pvt. Ltd.",
-    period: "Mar 2026 – Sep 2026",
-    status: "Intern",
-    statusStyle: "bg-cyan-50 dark:bg-cyan-950/50 text-cyan-700 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-800/60",
-    accent: "bg-cyan-400",
-    desc: "Engineered a 7-stage AI irrigation advisory system for smallholder farmers integrating CHIRPS, ERA5, SMAP, Random Forests, and PINNs. Delivered real-time predictive alerts with 97.1% accuracy, 98.9% precision, and a 0.984 F1-score.",
-    tags: ["AI", "Random Forests", "Machine Learning"],
-  },
-  {
-    type: "work",
     title: "Co-Founder & Full-Stack Dev",
     org: "Daemons Build",
     period: "Jan 2026 – Present",
@@ -51,6 +29,28 @@ const experiences = [
   },
   {
     type: "work",
+    title: "Frontend & Integration Lead",
+    org: "Win Capital Funds",
+    period: "Mar 2026 – Sep 2026",
+    status: "Intern",
+    statusStyle: "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60",
+    accent: "bg-emerald-400",
+    desc: "Trading dashboard UI, TradingView charts integration, real-time market feeds & NLP pipeline coordination.",
+    tags: ["React.js", "TradingView", "NLP", "Real-time"],
+  },
+  {
+    type: "work",
+    title: "AI/ML Intern",
+    org: "Matverse Vision Pvt. Ltd.",
+    period: "Mar 2026 – Sep 2026",
+    status: "Intern",
+    statusStyle: "bg-cyan-50 dark:bg-cyan-950/50 text-cyan-700 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-800/60",
+    accent: "bg-cyan-400",
+    desc: "Engineered a 7-stage AI irrigation advisory system for smallholder farmers integrating CHIRPS, ERA5, SMAP, Random Forests, and PINNs. Delivered real-time predictive alerts with 97.1% accuracy, 98.9% precision, and a 0.984 F1-score.",
+    tags: ["AI", "Random Forests", "Machine Learning"],
+  },
+  {
+    type: "work",
     title: "Web Development Intern",
     org: "Trust Fintech",
     period: "Jun 2025 – Jan 2026",
@@ -70,7 +70,7 @@ const experiences = [
     accent: "bg-amber-400",
     desc: "Top performer with CGPA 8.82. Core subjects: DSA, AI, DBMS, Software Engineering, Computer Networks.",
     tags: ["DSA", "AI", "DBMS", "Software Engineering"],
-  },
+  }
 ];
 
 export default function ExperienceSection() {

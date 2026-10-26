@@ -73,9 +73,6 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "h4pOUb1lzmN1xJhHQE7fXfz2RnMVHvYYICZwQVyKvAM",
-    other: {
-      "google-adsense-account": "ca-pub-9766527351850928",
-    },
   },
   icons: {
     icon: "/logo.png",
@@ -114,18 +111,14 @@ export default function RootLayout({
           src={process.env.UMAMI_DOMAIN}
           data-website-id={process.env.UMAMI_SITE_ID}
         ></Script>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9766527351850928"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        ></Script>
         {/* <Analytics /> */}
       </head>
       <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
+          forcedTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <Particles

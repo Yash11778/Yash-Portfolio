@@ -65,7 +65,7 @@ const tools = [
 
 const stats = [
   { value: "25+", label: "Technologies" },
-  { value: "4+",  label: "Hackathons Won" },
+  { value: "5+",  label: "Hackathons Won" },
   { value: "100K+", label: "Lines of Code" },
   { value: "20+", label: "Projects Shipped" },
 ];

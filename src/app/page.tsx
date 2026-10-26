@@ -26,7 +26,7 @@ const heroMarqueeItems = [
   "IIT KGP Top 20",
   "NASA 2nd Prize",
   "ETHGlobal 2025",
-  "4× Hackathon Winner",
+  "5× Hackathon Winner",
   "Gov. of India IP Holder",
 ];
 

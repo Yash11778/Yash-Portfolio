@@ -6,7 +6,6 @@ import styles from "./style.module.scss";
 import { opacity, background } from "./anim";
 import Nav from "./nav";
 import { cn } from "@/lib/utils";
-import { AdvancedModeToggle } from "../theme/advanced-mode-toggle";
 import { Button } from "../ui/button";
 import { config } from "@/data/config";
 import OnlineUsers from "../realtime/online-users";
@@ -54,7 +53,6 @@ const Header = ({ loader }: HeaderProps) => {
         </Link>
 
         <OnlineUsers />
-        <AdvancedModeToggle className="w-6 h-6 mr-4" />
         <Button
           variant={"ghost"}
           onClick={() => setIsActive(!isActive)}

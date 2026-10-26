@@ -21,7 +21,7 @@ const ProjectsSectionModern = () => {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-xs font-bold tracking-[0.25em] text-gray-400 uppercase">04 — Projects</span>
+            <span className="text-xs font-bold tracking-[0.25em] text-gray-400 uppercase">05 — Projects</span>
             <div className="flex-1 h-px bg-gray-200 dark:bg-gray-800" />
             <a
               href="/projects"

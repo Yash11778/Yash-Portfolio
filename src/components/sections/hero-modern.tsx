@@ -142,7 +142,7 @@ const HeroSectionModern = () => {
                   transition={{ delay: 1.2 }}
                   className="text-lg text-gray-700 dark:text-gray-300 border-l-4 border-neo-yellow pl-4 max-w-md"
                 >
-                  Building production-grade SaaS, AI tools & Web3 apps. Top 20 at IIT KGP out of 20,000+ teams.
+                  Building production-grade SaaS, AI tools & Web3 apps. Top 20 at IIT KGP out of 9,913+ teams.
                 </motion.p>
 
                 {/* CTAs */}
@@ -240,7 +240,7 @@ const HeroSectionModern = () => {
                 transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
                 className="absolute -top-2 -right-4 lg:-right-8 bg-neo-purple text-white text-xs font-black px-3 py-1.5 neo-border shadow-neo-sm rotate-6 z-20 whitespace-nowrap"
               >
-                🏆 Top 20 / 20K+
+                🏆 Top 20 / 9,913+
               </motion.div>
               <motion.div
                 animate={{ y: [0, 8, 0] }}
@@ -256,7 +256,7 @@ const HeroSectionModern = () => {
               {[
                 { value: 1, suffix: ".5Y", label: "Experience", bg: "bg-neo-yellow", color: "text-black" },
                 { value: 12, suffix: "+", label: "Hackathons", bg: "bg-neo-blue", color: "text-white" },
-                { value: 4, suffix: "×", label: "1st Prize", bg: "bg-neo-purple", color: "text-white" },
+                { value: 5, suffix: "×", label: "1st Prize", bg: "bg-neo-purple", color: "text-white" },
               ].map((s) => (
                 <motion.div
                   key={s.label}

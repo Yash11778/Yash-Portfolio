@@ -29,7 +29,7 @@ const TOOLS = [
 ];
 
 const facts = [
-  { emoji: "🏆", text: "Top 20 / 20,000+ teams at IIT KGP KDSH 2025", icon: Trophy, accent: "border-l-neo-yellow" },
+  { emoji: "🏆", text: "Top 20 / 9,913+ teams at IIT KGP KDSH 2025", icon: Trophy, accent: "border-l-neo-yellow" },
   { emoji: "©️", text: "Govt. of India copyright — SkillPilot (LD-36923/2025-CO)", icon: Zap, accent: "border-l-neo-purple" },
   { emoji: "🚀", text: "Co-founded Daemons Build — product studio & SaaS startup", icon: Globe, accent: "border-l-neo-blue" },
   { emoji: "🎤", text: "Guest speaker on AI & Society at ViBha, Daryapur", icon: Cpu, accent: "border-l-neo-pink" },
@@ -152,7 +152,7 @@ export default function AboutPage() {
                   My work spans LLM integration, Prompt Engineering, real-time trading dashboards, and blockchain smart contracts. I&apos;ve worked at Trust Fintech, Barodynamics Pvt. Ltd., Win Capital Funds, and Matverse Vision Pvt. Ltd., and co-founded <strong className="text-black dark:text-white">Daemons Build</strong>.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  12+ hackathons, 4 first prizes, a <strong className="text-black dark:text-white">Government of India software copyright</strong> for SkillPilot, and a <strong className="text-black dark:text-white">Google Cloud Arcade Champion</strong> with 108K+ points and 97 skill badges.
+                  12+ hackathons, 5 first prizes, a <strong className="text-black dark:text-white">Government of India software copyright</strong> for SkillPilot, and a <strong className="text-black dark:text-white">Google Cloud Arcade Champion</strong> with 108K+ points and 97 skill badges.
                 </p>
               </div>
 

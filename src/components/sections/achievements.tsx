@@ -7,23 +7,24 @@ import { useRef, useEffect } from "react";
 
 const bigStats = [
   { value: 12,   suffix: "+",  label: "Hackathons",      color: "text-amber-500" },
-  { value: 4,    suffix: "×",  label: "1st Place Wins",  color: "text-violet-500" },
+  { value: 5,    suffix: "×",  label: "1st Place Wins",  color: "text-violet-500" },
   { value: 97,   suffix: "",   label: "Cloud Badges",    color: "text-blue-500" },
   { value: 1,    suffix: "",   label: "Govt. IP Holder", color: "text-emerald-500" },
 ];
 
 const hackathons = [
-  { event: "IIT Kharagpur KDSH 2025", result: "Top 20 / 9,913 teams",  icon: Trophy, level: "prestige" },
+  { event: "IIT Kharagpur KDSH 2025", result: "Top 20 / 9,913+ teams",  icon: Trophy, level: "prestige" },
   { event: "HackWise — IIM Indore",   result: "National Finalist",      icon: Star,   level: "prestige" },
   { event: "ETHGlobal 2025",          result: "Selected",               icon: Globe,  level: "prestige" },
   { event: "NASA Space Apps",          result: "2nd Prize",              icon: Medal,  level: "prestige" },
+  { event: "GraphRAG Inference Hackathon", result: "1st Prize",          icon: Cpu,    level: "notable"  },
   { event: "Shardeum Bounty",          result: "1st Prize",              icon: Cpu,    level: "notable"  },
-  { event: "HackIndia 2025",          result: "Regional Finalist",      icon: Globe,  level: "notable"  },
-  { event: "Stellar Ragnarok",         result: "3rd Prize",              icon: Zap,    level: "notable"  },
-  { event: "SIH Expo 2024",           result: "3rd Prize",              icon: Star,   level: "notable"  },
   { event: "WebVenture 2025",          result: "1st Prize",              icon: Award,  level: "local"    },
   { event: "Raisoni Tech 2025",        result: "1st Prize",              icon: Trophy, level: "local"    },
   { event: "Idea Cube, SVPCET",        result: "1st Prize",              icon: Trophy, level: "local"    },
+  { event: "HackIndia 2025",          result: "Regional Finalist",      icon: Globe,  level: "notable"  },
+  { event: "Stellar Ragnarok",         result: "3rd Prize",              icon: Zap,    level: "notable"  },
+  { event: "SIH Expo 2024",           result: "3rd Prize",              icon: Star,   level: "notable"  },
   { event: "Navikshaa Dev Battle",     result: "4th + Job Offer",        icon: Award,  level: "local"    },
 ];
 
@@ -114,6 +115,7 @@ export default function AchievementsSection() {
               const Icon = h.icon;
               const isPrestige = h.level === "prestige";
               const isNotable  = h.level === "notable";
+              const isWinner   = h.result === "1st Prize";
               return (
                 <motion.div
                   key={i}
@@ -123,7 +125,9 @@ export default function AchievementsSection() {
                   transition={{ delay: i * 0.04 }}
                   className={cn(
                     "flex items-start gap-3 p-4 rounded-xl border transition-all duration-200 cursor-default",
-                    isPrestige
+                    isWinner
+                      ? "bg-violet-50 dark:bg-violet-950/30 border-violet-200 dark:border-violet-800/60 hover:border-violet-400 dark:hover:border-violet-600"
+                      : isPrestige
                       ? "bg-amber-50 dark:bg-amber-950/30 border-amber-100 dark:border-amber-900/50 hover:border-amber-300 dark:hover:border-amber-700"
                       : isNotable
                       ? "bg-gray-50 dark:bg-[#111] border-gray-100 dark:border-gray-800 hover:border-gray-200 dark:hover:border-gray-700"
@@ -132,14 +136,19 @@ export default function AchievementsSection() {
                 >
                   <Icon className={cn(
                     "w-4 h-4 mt-0.5 shrink-0",
-                    isPrestige ? "text-amber-500" : isNotable ? "text-gray-500 dark:text-gray-400" : "text-gray-300 dark:text-gray-600"
+                    isWinner ? "text-violet-500" : isPrestige ? "text-amber-500" : isNotable ? "text-gray-500 dark:text-gray-400" : "text-gray-300 dark:text-gray-600"
                   )} />
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <p className={cn(
                         "text-sm font-semibold leading-snug",
-                        isPrestige ? "text-amber-900 dark:text-amber-100" : isNotable ? "text-gray-800 dark:text-gray-200" : "text-gray-500 dark:text-gray-500"
+                        isWinner ? "text-violet-950 dark:text-violet-100" : isPrestige ? "text-amber-900 dark:text-amber-100" : isNotable ? "text-gray-800 dark:text-gray-200" : "text-gray-500 dark:text-gray-500"
                       )}>{h.event}</p>
+                      {isWinner && (
+                        <span className="text-[9px] font-black px-1.5 py-0.5 rounded bg-violet-600 text-white uppercase tracking-widest shrink-0">
+                          Winner
+                        </span>
+                      )}
                       {isPrestige && (
                         <span className="text-[9px] font-black px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-900/60 text-amber-700 dark:text-amber-300 uppercase tracking-widest shrink-0">
                           Top Tier
@@ -148,7 +157,7 @@ export default function AchievementsSection() {
                     </div>
                     <p className={cn(
                       "text-xs font-medium mt-0.5",
-                      isPrestige ? "text-amber-600 dark:text-amber-400" : isNotable ? "text-gray-500 dark:text-gray-400" : "text-gray-400 dark:text-gray-600"
+                      isWinner ? "text-violet-600 dark:text-violet-400 font-bold" : isPrestige ? "text-amber-600 dark:text-amber-400" : isNotable ? "text-gray-500 dark:text-gray-400" : "text-gray-400 dark:text-gray-600"
                     )}>{h.result}</p>
                   </div>
                 </motion.div>

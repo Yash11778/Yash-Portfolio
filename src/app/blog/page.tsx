@@ -16,7 +16,7 @@ const topics = [
 ];
 
 const comingSoon = [
-  { title: "How I Beat 20,000+ Teams at IIT KGP", tag: "Hackathon Diaries", mins: "8 min read" },
+  { title: "How I Beat 9,913+ Teams at IIT KGP", tag: "Hackathon Diaries", mins: "8 min read" },
   { title: "Building a Government-Certified AI Platform", tag: "AI & LLMs", mins: "12 min read" },
   { title: "My Web3 Journey: From Zero to Smart Contracts", tag: "Web3 / Blockchain", mins: "10 min read" },
   { title: "Next.js 15 App Router Patterns I Actually Use", tag: "Web Development", mins: "7 min read" },

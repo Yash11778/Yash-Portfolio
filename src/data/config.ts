@@ -39,7 +39,7 @@ const config = {
   tagline: "Full Stack Developer · AI Builder · Web3 Enthusiast",
 
   get ogImg() {
-    return this.site + "/assets/seo/og-image.png";
+    return this.site + "/assets/seo/og-image.png?v=2";
   },
   social: {
     github: "https://github.com/Yash11778",
