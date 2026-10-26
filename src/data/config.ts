@@ -47,6 +47,6 @@ const config = {
     twitter: "https://x.com/Yash_1177",
     instagram: "https://www.instagram.com/ig_yash117?igsh=NnY4dXBzd3RhNmFm",
   },
-  resume: "https://drive.google.com/file/d/1ihyqTqfvu85dT2LfOa7gsWRiiibv-ltU/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1u-nt6h-uQEb1YVBw9lzrkf85aIy8OlaM/view?usp=sharing",
 };
 export { config };

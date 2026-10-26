@@ -149,7 +149,7 @@ export default function AboutPage() {
                   Hey! I&apos;m <strong className="text-black dark:text-white">Yash Dharme</strong> — a Full Stack Developer, AI Builder, and Web3 enthusiast from Nagpur, Maharashtra. I build production-grade SaaS platforms, AI-powered tools, and decentralized applications that solve real problems.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                  My work spans LLM integration, Prompt Engineering, real-time trading dashboards, and blockchain smart contracts. I&apos;ve worked at Trust Fintech, Barodynamics Pvt. Ltd., and Win Capital Funds, and co-founded <strong className="text-black dark:text-white">Daemons Build</strong>.
+                  My work spans LLM integration, Prompt Engineering, real-time trading dashboards, and blockchain smart contracts. I&apos;ve worked at Trust Fintech, Barodynamics Pvt. Ltd., Win Capital Funds, and Matverse Vision Pvt. Ltd., and co-founded <strong className="text-black dark:text-white">Daemons Build</strong>.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   12+ hackathons, 4 first prizes, a <strong className="text-black dark:text-white">Government of India software copyright</strong> for SkillPilot, and a <strong className="text-black dark:text-white">Google Cloud Arcade Champion</strong> with 108K+ points and 97 skill badges.

@@ -279,7 +279,7 @@ const HeroSectionModern = () => {
               className="w-full max-w-sm lg:max-w-none bg-neo-pink neo-border shadow-neo p-4 -rotate-[0.5deg]"
             >
               <p className="text-xs font-bold text-white/70 uppercase tracking-widest mb-1">Currently working at</p>
-              <p className="text-white font-black text-base">Win Capital Funds · Barodynamics · Matverse · Daemons Build</p>
+              <p className="text-white font-black text-base">Barodynamics · Daemons Build</p>
               <div className="flex flex-wrap gap-1.5 mt-2">
                 {["React.js", "TradingView", "NLP", "SaaS"].map((t) => (
                   <span key={t} className="px-2 py-0.5 bg-white/20 text-white text-xs font-bold border border-white/30">
