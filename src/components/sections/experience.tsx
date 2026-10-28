@@ -117,7 +117,7 @@ export default function ExperienceSection() {
         <div className="relative">
           <div className="absolute left-[5px] top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800" />
 
-          <div className="space-y-5 pl-10">
+          <div className="space-y-5 pl-6 sm:pl-10">
             {experiences.map((exp, i) => {
               const Icon = exp.type === "education" ? GraduationCap : Briefcase;
               return (
@@ -131,21 +131,34 @@ export default function ExperienceSection() {
                 >
                   {/* Timeline dot */}
                   <div className={cn(
-                    "absolute -left-10 top-6 w-3 h-3 rounded-full border-2 border-gray-50 dark:border-[#0d0d0d] transition-all duration-300 group-hover:scale-125",
+                    "absolute -left-6 sm:-left-10 top-6 w-3 h-3 rounded-full border-2 border-gray-50 dark:border-[#0d0d0d] transition-all duration-300 group-hover:scale-125",
                     exp.accent
                   )} />
 
                   {/* Card */}
-                  <div className="relative overflow-hidden bg-white dark:bg-[#111] rounded-2xl border border-gray-100 dark:border-gray-800 p-6 sm:p-8 hover:shadow-lg dark:hover:shadow-black/40 hover:border-gray-200 dark:hover:border-gray-700 transition-all duration-300">
-                    {/* Themed background */}
-                    <Image
-                      src={exp.image}
-                      alt=""
-                      fill
-                      sizes="(min-width: 1024px) 960px, 100vw"
-                      className="pointer-events-none select-none object-cover object-right origin-right transition-transform duration-700 group-hover:scale-[1.03]"
-                    />
-                    <div className="pointer-events-none absolute inset-0 bg-white/70 lg:bg-transparent lg:bg-gradient-to-r lg:from-white/80 lg:via-white/30 lg:via-45% lg:to-transparent lg:to-60%" />
+                  <div className="relative overflow-hidden bg-white dark:bg-[#111] rounded-2xl border border-gray-100 dark:border-gray-800 p-5 sm:p-8 hover:shadow-lg dark:hover:shadow-black/40 hover:border-gray-200 dark:hover:border-gray-700 transition-all duration-300">
+                    {/* Themed background — behind the text on desktop */}
+                    <div className="pointer-events-none absolute inset-0 hidden lg:block opacity-50 group-hover:opacity-90 transition-opacity duration-500">
+                      <Image
+                        src={exp.image}
+                        alt=""
+                        fill
+                        sizes="960px"
+                        className="select-none object-cover object-right origin-right transition-transform duration-700 group-hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/30 via-45% to-transparent to-60%" />
+                    </div>
+
+                    {/* Themed banner — above the text on phones and tablets */}
+                    <div className="pointer-events-none relative lg:hidden -mx-5 -mt-5 sm:-mx-8 sm:-mt-8 mb-3 sm:mb-5 h-24 sm:h-44 overflow-hidden border-b border-gray-100 opacity-75">
+                      <Image
+                        src={exp.image}
+                        alt=""
+                        fill
+                        sizes="100vw"
+                        className="select-none object-cover object-right origin-right scale-[1.3] sm:scale-100"
+                      />
+                    </div>
 
                     {/* Accent top bar that reveals on hover */}
                     <motion.div
@@ -155,8 +168,8 @@ export default function ExperienceSection() {
                       transition={{ duration: 0.3 }}
                     />
 
-                    <div className="relative flex items-start gap-3 mb-4">
-                      <div className="mt-0.5 p-2 rounded-lg bg-white/80 border border-gray-100 dark:bg-gray-800 shrink-0">
+                    <div className="relative flex items-start gap-3 mb-3 sm:mb-4">
+                      <div className="hidden sm:block mt-0.5 p-2 rounded-lg bg-white/80 border border-gray-100 dark:bg-gray-800 shrink-0">
                         <Icon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
                       </div>
                       <div>
@@ -173,9 +186,9 @@ export default function ExperienceSection() {
                       </div>
                     </div>
 
-                    <p className="relative text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 ml-11 lg:max-w-[54%]">{exp.desc}</p>
+                    <p className="relative text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-3 sm:mb-4 sm:ml-11 lg:max-w-[54%]">{exp.desc}</p>
 
-                    <div className="relative flex flex-wrap gap-2 ml-11 lg:max-w-[54%]">
+                    <div className="relative flex flex-wrap gap-2 sm:ml-11 lg:max-w-[54%]">
                       {exp.tags.map(tag => (
                         <span key={tag} className="px-2.5 py-1 text-xs font-medium bg-white/80 border border-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-lg">
                           {tag}
